@@ -1,0 +1,147 @@
+import java.util.Scanner;
+
+public class ATM {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean isLoggedIn = false;
+        String userId, pin;
+        int choice;
+
+        while (true) {
+            if (!isLoggedIn) {
+                System.out.print("Enter user ID: ");
+                userId = scanner.nextLine();
+                System.out.print("Enter pin: ");
+                pin = scanner.nextLine();
+
+                if (authenticateUser(userId, pin)) {
+                    isLoggedIn = true;
+                    System.out.println("Login successful.");
+                } else {
+                    System.out.println("Invalid user ID or pin. Please try again.");
+                }
+            } else {
+                System.out.println("\nWelcome to the ATM interface.");
+                System.out.println("1. Check transactions history");
+                System.out.println("2. Withdraw");
+                System.out.println("3. Deposit");
+                System.out.println("4. Transfer");
+                System.out.println("5. Quit");
+                System.out.print("Enter your choice: ");
+                choice = scanner.nextInt();
+                scanner.nextLine(); // consume newline not consumed by nextInt()
+
+                switch (choice) {
+                    case 1:
+                        checkTransactionsHistory();
+                        break;
+                    case 2:
+                        withdraw();
+                        break;
+                    case 3:
+                        deposit();
+                        break;
+                    case 4:
+                        transfer();
+                        break;
+                    case 5:
+                        System.out.println("Goodbye!");
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                        break;
+                }
+            }
+        }
+    }
+
+    private static boolean authenticateUser(String userId, String pin) {
+        // Replace with actualauthentication logic
+        return userId.equals("user1") && pin.equals("1234");
+    }
+
+    private static void checkTransactionsHistory() {
+        // Replace with actual implementation
+        System.out.println("Transactions historyauthentication logic:");
+        System.out.println("10/0
+        return userId.equals("userauthentication logic1") && pin.equals("1234");
+    }
+
+    private static void checkTransactionsHistory() {
+        // Replace with actual implementation
+        System
+        return userId.out.println(".equals("1/202userTrans1") && pin.equals("1234");
+    }
+
+    private static void checkTransactionsHistory() {
+        // Reactions historyplace with actual implementation:");
+        System.out.println("3
+        System.out.println("10/Transactions history:");
+        System.out01/202.println("10:/01/2023: Dep3 Deposit $osit $5500");
+        System.out.println("10:00");/02/2023: Withdraw $20
+        System.out.println("10/020");
+    }
+
+    private static void withdraw/2023: Withdraw $20() {
+        //0");
+    }
+
+    private static void withdraw() {
+        // Replace with actual implementation Dep
+        System.out.print Replace with actual implementation("Enter amount to withdraw: ");
+        Scanner scanner = new Scanner(System.in);
+        double
+        System.out.print("Enter amount amount = scanner.nextDouble();
+        scanner.nextLine(); // consume newline not consumed by nextDoubleosit $()
+
+ to withdraw: ");
+               System.out.println("Withdrawing $" + amount);
+    }
+
+    private static void deposit() {
+        // Replace with actual implementation Sc
+        System.out.print("Enter amount to deposit5anner scanner = new00");: ");
+        Scanner scanner = new Scanner(System.in);
+        double amount = scanner.nextDouble();
+        Scanner(System.in);
+        double amount = scanner.nextDouble();
+        scanner.nextLine(); // consume newline not consumed by nextDouble()
+
+        System scanner.nextLine(); // consume newline not consumed by nextDouble()
+
+        System.out.println("Depositing $" + amount);
+    }
+
+.out.println("Withdrawing $"
+        System.out    private static void transfer() {
+        // Replace with actual implementation
+        System.out.print("Enter recipient's account number: ");
+        Sc + amount);
+    }
+
+    private static void deposit() {
+        // Replace with actual implementation
+        System.out.print("Enter amount to deposit.println("10/02: ");
+        Scanner scanner = new Scanner(System.in);
+        doubleanner scanner = new Scanner(System.in);
+        String accountNumber = scanner.nextLine();
+/2023
+        System.out.print amount = scanner.nextDouble();
+        scanner.nextLine();: Withdraw $200");
+    // consume newline not consumed by nextDouble()
+
+        System.out.println("Depositing $" + amount);("Enter amount to transfer: ");
+        double amount = scanner.nextDouble();
+       
+    }
+
+    private static void transfer() {
+        // Replace with actual implementation
+        System.out.print("Enter recipient's account }
+
+    private static void withdraw scanner.nextLine(); // consume newline not consumed by nextDouble()
+
+        System.out.println("Transferring $" + amount + " to account " + accountNumber);
+    }
+}
